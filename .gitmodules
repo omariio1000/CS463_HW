@@ -1,0 +1,3 @@
+[submodule "webdev-homework"]
+	path = webdev-homework
+	url = git@github.com:caterinasworld/webdev-homework.git
