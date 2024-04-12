@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 - Form</title>
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
+  </head>
+  <body>
+    <!-- Exercise: Fix all semantics issues in the following HTML structure -->
+    <main>
+      <h1>04 - Form</h1>
+      <form>
+        <h2>Create a new database</h2>
+        <div>Organization</div>
+        <input type="text" />
+        <div>Database name</div>
+        <input type="text" />
+        <div>
+          Lowercase alphanumeric characters, dashes and underscores only
+        </div>
+        <div>Region</div>
+        <input type="text" />
+        <div>
+          For best performance, enter a region closest to your application
+        </div>
+        <div>
+          <div>Plan type</div>
+          <input type="radio" />
+          <label for="basic">Basic</label>
+          <input type="radio" />
+          <label for="business">Business</label>
+          <input type="radio" />
+          <label for="pro">Pro</label>
+        </div>
+        <div>
+          <div>Included Fields</div>
+          <input type="checkbox" />
+          <label>Name</label>
+          <input type="checkbox" />
+          <label>Role</label>
+          <input type="checkbox" />
+          <label>Email</label>
+          <input type="checkbox" />
+          <label>Company Name</label>
+          <input type="checkbox" />
+          <label>Description</label>
+          <input type="checkbox" />
+          <label>Type</label>
+        </div>
+        <button>Create</button>
+        <button>Reset</button>
+      </form>
+    </main>
+  </body>
+</html>
