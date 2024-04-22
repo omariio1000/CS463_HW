@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>04 - Form</title>
     <link rel="stylesheet" type="text/css" href="../../styles.css" />
   </head>
@@ -10,46 +11,85 @@
     <!-- Exercise: Fix all semantics issues in the following HTML structure -->
     <main>
       <h1>04 - Form</h1>
-      <form>
+      <form action="/submit">
         <h2>Create a new database</h2>
-        <div>Organization</div>
-        <input type="text" />
-        <div>Database name</div>
-        <input type="text" />
         <div>
-          Lowercase alphanumeric characters, dashes and underscores only
+          <label for="organization">Organization Type:</label>
+          <input
+            type="text"
+            id="organization"
+            name="organization"
+            placeholder="Top-Down/Bottom-Up"
+          /><br />
         </div>
-        <div>Region</div>
-        <input type="text" />
+
         <div>
-          For best performance, enter a region closest to your application
+          <label for="database">Database Name:</label>
+          <input
+            type="text"
+            id="database"
+            name="database"
+            placeholder="Database Name"
+          /><br />
+          <p>Lowercase alphanumeric characters, dashes and underscores only.</p>
         </div>
+
         <div>
-          <div>Plan type</div>
-          <input type="radio" />
-          <label for="basic">Basic</label>
-          <input type="radio" />
-          <label for="business">Business</label>
-          <input type="radio" />
+          <label for="region">Region:</label>
+          <input
+            type="text"
+            id="region"
+            name="region"
+            placeholder="Region"
+          /><br />
+          <p>
+            For best performance, enter a region closest to your application.
+          </p>
+        </div>
+
+        <fieldset>
+          <legend>Plan type</legend>
+          <input type="radio" id="basic" name="yes" value="Basic" />
+          <label for="basic">Basic</label><br />
+
+          <input type="radio" id="business" name="business" value="Business" />
+          <label for="business">Business</label><br />
+
+          <input type="radio" id="pro" name="pro" value="Pro" />
           <label for="pro">Pro</label>
-        </div>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Included Fields</legend>
+
+          <input type="checkbox" id="name" name="name" value="yes" />
+          <label for="name">Name</label><br />
+
+          <input type="checkbox" id="role" name="role" value="yes" />
+          <label for="role">Role</label><br />
+
+          <input type="checkbox" id="email" name="email" value="yes" />
+          <label for="email">Email</label><br />
+
+          <input type="checkbox" id="company" name="company" value="yes" />
+          <label for="company">Company Name</label><br />
+
+          <input
+            type="checkbox"
+            id="description"
+            name="description"
+            value="yes"
+          />
+          <label for="description">Description</label><br />
+
+          <input type="checkbox" id="type" name="type" value="yes" />
+          <label for="type">Type</label><br />
+        </fieldset>
+        <br />
         <div>
-          <div>Included Fields</div>
-          <input type="checkbox" />
-          <label>Name</label>
-          <input type="checkbox" />
-          <label>Role</label>
-          <input type="checkbox" />
-          <label>Email</label>
-          <input type="checkbox" />
-          <label>Company Name</label>
-          <input type="checkbox" />
-          <label>Description</label>
-          <input type="checkbox" />
-          <label>Type</label>
+          <input type="submit" value="Create" />
+          <input type="reset" value="Reset" />
         </div>
-        <button>Create</button>
-        <button>Reset</button>
       </form>
     </main>
   </body>
