@@ -16,7 +16,4 @@ var firstSentence = bio.textContent.split(".")[0];
 var spanElement = document.createElement("span");
 spanElement.textContent = firstSentence;
 spanElement.style.fontWeight = "bold";
-bio.innerHTML = bio.innerHTML.replace(
-  firstSentence,
-  spanElement.outerHTML
-);
+bio.innerHTML = bio.innerHTML.replace(firstSentence, spanElement.outerHTML);

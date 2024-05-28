@@ -50,20 +50,24 @@ const createSpaceshipComponent = (spaceship) => {
 
   const maxAS = document.createElement("p");
   const speedValue = document.createElement("b");
-  const description = document.createTextNode(" Max atmosphering speed");
   speedValue.textContent = parseInt(
     spaceship.max_atmosphering_speed
   ).toLocaleString();
+  const speedLabel = document.createElement("span");
+  speedLabel.textContent = " Max atmosphering speed";
   maxAS.appendChild(speedValue);
-  maxAS.appendChild(description);
+  maxAS.appendChild(document.createElement("br")); // Line break
+  maxAS.appendChild(speedLabel);
   maxAS.classList.add("grid-item", "maxAS");
 
   const cargo = document.createElement("p");
   const cargoN = document.createElement("b");
-  const cargoD = document.createTextNode(" Cargo Capacity");
   cargoN.textContent = parseInt(spaceship.cargo_capacity).toLocaleString();
+  const cargoLabel = document.createElement("span");
+  cargoLabel.textContent = " Cargo Capacity";
   cargo.appendChild(cargoN);
-  cargo.appendChild(cargoD);
+  cargo.appendChild(document.createElement("br")); // Line break
+  cargo.appendChild(cargoLabel);
   cargo.classList.add("grid-item", "capacity");
 
   container.append(name);
