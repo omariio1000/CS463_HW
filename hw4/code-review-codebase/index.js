@@ -4,6 +4,7 @@ for (const moreInfoButton of moreInfoButtons) {
   moreInfoButton.addEventListener("click", (event) => {
     const popupSection = event.currentTarget.parentElement.nextElementSibling;
     popupSection.style.display = "block";
+    document.body.classList.add("no-scroll");
   });
 }
 
@@ -11,8 +12,8 @@ const closePopupButtons = document.querySelectorAll(".close-popup-button");
 
 for (const closePopupButton of closePopupButtons) {
   closePopupButton.addEventListener("click", (event) => {
-    console.log(event.target);
-    const popupSection = event.currentTarget.parentElement.parentElement.parentElement;
+    const popupSection = event.currentTarget.closest('.popup-section-container');
     popupSection.style.display = "none";
+    document.body.classList.remove("no-scroll");
   });
 }
